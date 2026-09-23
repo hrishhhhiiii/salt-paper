@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salt & Pepper | Premier Bistro & Café in Belghoria, Kolkata</title>
+  <meta name="description" content="Experience the finest Indo-Chinese, Continental, Tandoori Kebabs, Burgers and rich Thick Shakes at Salt & Pepper Belghoria, Kolkata. Rated 4.6★ on Google.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <img src="assets/logo.jpg" alt="Salt & Pepper Belghoria Official Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <h1>Salt & Pepper</h1>
+          <span>Belghoria • Kolkata</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#menucard">Menu Card</a></li>
+        <li><a href="#signatures">Bestsellers</a></li>
+        <li><a href="#menu">Digital Menu</a></li>
+        <li><a href="#reviews">Ratings</a></li>
+        <li><a href="#reservations">Reserve</a></li>
+        <li><a href="#contact">Location</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn-tray-toggle" id="trayBtn" title="View Bill Estimation Tray">
+          <span>Tray</span>
+          <span class="tray-badge" id="trayCountBadge">0</span>
+        </button>
+        <a href="#reservations" class="btn-primary" style="display:none; @media(min-width:768px){display:inline-flex;}">Book Table</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+  <header class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <span>✨</span> Voted Belghoria's #1 Favorite Bistro Cafe
+        </div>
+        <h2 class="hero-title">
+          Where Savory Flavors Meet <span>Warm Vibes</span>.
+        </h2>
+        <p class="hero-subtitle">
+          Indulge in authentic Kolkata-style Fish & Chips, succulent Tandoori Kebabs, mouth-watering Burgers, and divine Thick Shakes in a cozy, ambient setting on Feeder Road.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#menu" class="btn-primary">
+            <span>Explore Menu & Pricing</span> →
+          </a>
+          <a href="#menucard" class="btn-secondary">
+            <span>View Menu Card</span>
+          </a>
+          <a href="https://www.swiggy.com/restaurants/salt-and-pepper-belghoria-kolkata" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="border-color: #fc8019; color: #fc8019;">
+            <span>Order Delivery</span>
+          </a>
+        </div>
+
+        <div class="hero-quick-meta">
+          <div class="meta-stat-item">
+            <h4>4.6 ★</h4>
+            <p>2,000+ Google Reviews</p>
+          </div>
+          <div class="meta-stat-item">
+            <h4>12 PM - 11 PM</h4>
+            <p>Open 7 Days a Week</p>
+          </div>
+          <div class="meta-stat-item">
+            <h4>₹700 for 2</h4>
+            <p>Budget-Friendly Feasts</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= PRINTED MENU CARD SHOWCASE ================= -->
+  <section class="section" id="menucard" style="padding-bottom: 20px;">
+    <div class="container">
+      <div class="menu-card-spotlight">
+        <div class="menu-card-img-wrap">
+          <img src="assets/menu-card.jpg" alt="Official Salt & Pepper Belghoria Menu Card" loading="lazy">
+        </div>
+        <div class="menu-card-info">
+          <span class="section-tag">Authentic Dining Card</span>
+          <h3>Dine-In Menu & Specialties</h3>
+          <p>
+            Experience our carefully curated culinary journey. From fiery Kolkata-Tangra style Indo-Chinese to clay-oven Tandoori kebabs and Continental classics, our dine-in menu cards reflect the warm, welcoming ambiance of Belghoria.
+          </p>
+          <ul class="menu-card-features">
+            <li><span>✓</span> Multi-cuisine options: North Indian, Continental & Indo-Chinese</li>
+            <li><span>✓</span> Clear, pocket-friendly INR pricing with zero hidden surcharges</li>
+            <li><span>✓</span> Dedicated Pure-Vegetarian and Non-Vegetarian selections</li>
+            <li><span>✓</span> Fresh ingredients prepared daily by experienced local chefs</li>
+          </ul>
+          <a href="#menu" class="btn-primary">
+            <span>Browse Full Interactive Menu Below</span> ↓
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SIGNATURE SPECIALTIES ================= -->
+  <section class="section" id="signatures">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Chef's Recommendations</span>
+        <h2 class="section-title">Signature Must-Try Dishes</h2>
+        <p class="section-desc">Hand-crafted recipes and crowd favorites that patrons travel across North Kolkata to savor.</p>
+      </div>
+
+      <div class="signature-grid">
+        <!-- Dish 1: Fish & Chips -->
+        <div class="signature-card">
+          <div class="signature-img-wrap">
+            <img src="assets/fish-and-chips.jpg" alt="Classic British Fish and Chips">
+            <span class="badge-veg-type badge-nonveg">Non-Veg</span>
+            <span class="badge-rating">⭐ 4.9</span>
+          </div>
+          <div class="signature-body">
+            <span class="signature-cat">Continental Special</span>
+            <h3 class="signature-title">Crispy Fish & Chips</h3>
+            <p class="signature-desc">Golden crumb-coated fish fillet, flaky Kolkata style with chunky French fries, herb tartar sauce & lemon.</p>
+            <div class="signature-footer">
+              <div class="item-price"><span>₹</span>345</div>
+              <button class="btn-add-tray" onclick="addToTray('sig-1')">+ Add to Tray</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 2: BBQ Chicken Burger -->
+        <div class="signature-card">
+          <div class="signature-img-wrap">
+            <img src="assets/bbq-burger.jpg" alt="Smoky BBQ Chicken Burger">
+            <span class="badge-veg-type badge-nonveg">Non-Veg</span>
+            <span class="badge-rating">⭐ 4.8</span>
+          </div>
+          <div class="signature-body">
+            <span class="signature-cat">Burgers</span>
+            <h3 class="signature-title">Smoky BBQ Chicken Burger</h3>
+            <p class="signature-desc">Char-grilled spiced chicken patty, melted cheddar cheese, smoky barbecue drizzle and seasoned crispy fries.</p>
+            <div class="signature-footer">
+              <div class="item-price"><span>₹</span>230</div>
+              <button class="btn-add-tray" onclick="addToTray('sig-2')">+ Add to Tray</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 3: Oreo Thick Shake -->
+        <div class="signature-card">
+          <div class="signature-img-wrap">
+            <img src="assets/oreo-shake.jpg" alt="Signature Thick Oreo Shake">
+            <span class="badge-veg-type badge-veg">Pure Veg</span>
+            <span class="badge-rating">⭐ 4.9</span>
+          </div>
+          <div class="signature-body">
+            <span class="signature-cat">Beverage Bestseller</span>
+            <h3 class="signature-title">Signature Thick Oreo Shake</h3>
+            <p class="signature-desc">Rich creamy dairy blend with crushed Oreo cookies, chocolate sauce, whipped cream peak and wafer.</p>
+            <div class="signature-footer">
+              <div class="item-price"><span>₹</span>195</div>
+              <button class="btn-add-tray" onclick="addToTray('sig-3')">+ Add to Tray</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dish 4: Sizzling Kebab Platter -->
+        <div class="signature-card">
+          <div class="signature-img-wrap">
+            <img src="assets/tandoori-kebab.jpg" alt="Sizzling Tandoori Kebab Platter">
+            <span class="badge-veg-type badge-nonveg">Non-Veg</span>
+            <span class="badge-rating">⭐ 4.8</span>
+          </div>
+          <div class="signature-body">
+            <span class="signature-cat">Tandoor</span>
+            <h3 class="signature-title">Sizzling Chicken Tikka & Seekh</h3>
+            <p class="signature-desc">Hot cast iron skillet with aromatic spiced chicken seekh, tikka chunks, pickled onions & fresh mint dip.</p>
+            <div class="signature-footer">
+              <div class="item-price"><span>₹</span>310</div>
+              <button class="btn-add-tray" onclick="addToTray('sig-4')">+ Add to Tray</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE FULL MENU ================= -->
+  <section class="section" id="menu" style="background: rgba(26, 28, 34, 0.45);">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Dine-In & Takeaway Menu</span>
+        <h2 class="section-title">Explore Our Full Menu</h2>
+        <p class="section-desc">Search, filter by cuisine, check authentic pricing, and plan your meal with our interactive tray calculator.</p>
+      </div>
+
+      <div class="menu-controls">
+        <!-- Search bar -->
+        <div class="menu-search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="menuSearchInput" placeholder="Search dishes (e.g. Fish, Shake, Momos, Burger)..." aria-label="Search dishes">
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+          <button class="cat-tab-btn active" data-category="all">All Dishes</button>
+          <button class="cat-tab-btn" data-category="kebabs">Starters & Kebabs</button>
+          <button class="cat-tab-btn" data-category="burgers">Burgers & Sandwiches</button>
+          <button class="cat-tab-btn" data-category="chinese">Indo-Chinese</button>
+          <button class="cat-tab-btn" data-category="momos">Momos & Dimsums</button>
+          <button class="cat-tab-btn" data-category="continental">Continental & Mains</button>
+          <button class="cat-tab-btn" data-category="northindian">North Indian</button>
+          <button class="cat-tab-btn" data-category="beverages">Beverages & Shakes</button>
+          <button class="cat-tab-btn" data-category="desserts">Desserts</button>
+        </div>
+
+        <!-- Diet Filters -->
+        <div class="diet-filters">
+          <div class="diet-filter-pill" id="vegFilterPill">
+            <span class="item-diet-dot diet-dot-veg"></span> Pure Veg Only
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="menu-list-grid" id="menuListGrid">
+        <!-- Injected via app.js & menu-data.js -->
+      </div>
+
+      <!-- Online Order Partners Banner -->
+      <div class="order-online-banner" id="delivery">
+        <div class="order-banner-text">
+          <h3>Craving Food at Home? Order Right Away!</h3>
+          <p>Delivered sizzling hot to your doorstep via Belghoria's preferred delivery partners.</p>
+        </div>
+        <div class="delivery-partners-btns">
+          <a href="https://www.swiggy.com/restaurants/salt-and-pepper-belghoria-kolkata" target="_blank" rel="noopener noreferrer" class="btn-delivery btn-swiggy">
+            🛵 Order on Swiggy
+          </a>
+          <a href="https://www.district.in/kolkata/salt-pepper-belghoria/" target="_blank" rel="noopener noreferrer" class="btn-delivery btn-zomato">
+            🍽️ Order on Zomato / District
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RATINGS & REVIEWS ================= -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-title-wrap">
+        <span class="section-tag">Loved By Belghoria</span>
+        <h2 class="section-title">What Our Guests Say</h2>
+        <p class="section-desc">Real stories, authentic ratings, and culinary experiences shared by patrons across Kolkata.</p>
+      </div>
+
+      <!-- Ratings Metric Badges -->
+      <div class="ratings-header-badge-row">
+        <div class="rating-score-box">
+          <div class="score-num">4.6★</div>
+          <div class="score-info">
+            <h5>Google Maps</h5>
+            <p>Over 2,000+ authentic reviews</p>
+          </div>
+        </div>
+
+        <div class="rating-score-box">
+          <div class="score-num">4.9★</div>
+          <div class="score-info">
+            <h5>Justdial Verified</h5>
+            <p>2,200+ local customer ratings</p>
+          </div>
+        </div>
+
+        <div class="rating-score-box">
+          <div class="score-num">4.5★</div>
+          <div class="score-info">
+            <h5>Swiggy Dineout</h5>
+            <p>Top trending cafe in Belghoria</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Carousel Grid -->
+      <div class="reviews-carousel-grid" id="reviewsContainer">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESERVATIONS & LOCATION ================= -->
+  <section class="section" id="reservations" style="background: rgba(26, 28, 34, 0.45);">
+    <div class="container">
+      <div class="reserve-location-split">
+        <!-- Reservation Form Box -->
+        <div class="reserve-card-box">
+          <span class="section-tag">Skip The Wait</span>
+          <h3>Book Your Table</h3>
+          <p>Due to high weekend demand, we recommend reserving your table in advance.</p>
+
+          <form id="reservationForm" class="reservation-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resName">Full Name *</label>
+                <input type="text" id="resName" placeholder="e.g. Subhashish Roy" required>
+              </div>
+              <div class="form-group">
+                <label for="resPhone">Phone Number *</label>
+                <input type="tel" id="resPhone" placeholder="e.g. +91 98765 43210" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resDate">Preferred Date *</label>
+                <input type="date" id="resDate" required>
+              </div>
+              <div class="form-group">
+                <label for="resTime">Preferred Time *</label>
+                <select id="resTime" required>
+                  <option value="">Select Time Slot</option>
+                  <option value="12:30 PM">12:30 PM (Lunch)</option>
+                  <option value="01:30 PM">01:30 PM (Lunch)</option>
+                  <option value="03:00 PM">03:00 PM (Afternoon Cafe)</option>
+                  <option value="05:30 PM">05:30 PM (Evening Snacks)</option>
+                  <option value="07:30 PM">07:30 PM (Dinner)</option>
+                  <option value="08:30 PM">08:30 PM (Dinner)</option>
+                  <option value="09:30 PM">09:30 PM (Late Dinner)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="resGuests">Number of Guests *</label>
+                <select id="resGuests">
+                  <option value="2">2 Guests (Couple / Friends)</option>
+                  <option value="4" selected>4 Guests (Family / Group)</option>
+                  <option value="6">6 Guests (Small Party)</option>
+                  <option value="8+">8+ Guests (Celebration)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="resOccasion">Occasion / Seating Request</label>
+                <input type="text" id="resOccasion" placeholder="Birthday, Anniversary, Quiet corner">
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary" style="margin-top: 10px; width: 100%; justify-content: center;">
+              Confirm Reservation Request
+            </button>
+          </form>
+        </div>
+
+        <!-- Location & Contact Box -->
+        <div class="location-info-box" id="contact">
+          <span class="section-tag">How To Reach</span>
+          <h3>Find Salt & Pepper</h3>
+          <p>Easily accessible from Belghoria Railway Station and BT Road.</p>
+
+          <div class="loc-details-list">
+            <div class="loc-item">
+              <div class="loc-icon">📍</div>
+              <div class="loc-text">
+                <h5>Address</h5>
+                <p>24/1, Feeder Rd, Adarsha Pally, Ward No. 22, Belghoria, Kolkata, West Bengal 700056</p>
+              </div>
+            </div>
+
+            <div class="loc-item">
+              <div class="loc-icon">🚆</div>
+              <div class="loc-text">
+                <h5>Nearest Transit</h5>
+                <p>Belghoria Railway Station (~400 meters) | Dunlop Crossing (~1.5 km via BT Road)</p>
+              </div>
+            </div>
+
+            <div class="loc-item">
+              <div class="loc-icon">⏰</div>
+              <div class="loc-text">
+                <h5>Operating Hours</h5>
+                <p>Monday – Sunday: 12:00 PM – 11:00 PM</p>
+              </div>
+            </div>
+
+            <div class="loc-item">
+              <div class="loc-icon">💳</div>
+              <div class="loc-text">
+                <h5>Accepted Payments</h5>
+                <p>UPI (GPay/PhonePe/Paytm), Cards, Cash, Meal Wallets</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-embed-placeholder">
+            <img src="assets/hero-bg.jpg" alt="Map Location preview" style="width:100%; height:100%; object-fit:cover; filter: brightness(0.4);">
+            <a href="https://www.google.com/maps/search/salt+and+pepper+belghoria+kolkata/" target="_blank" rel="noopener noreferrer" class="btn-primary map-overlay-btn">
+              🗺️ Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BILL ESTIMATOR TRAY DRAWER ================= -->
+  <div class="tray-overlay" id="trayOverlay"></div>
+  <aside class="tray-drawer" id="trayDrawer">
+    <div class="tray-header">
+      <h3><span>🍽️</span> Meal Tray Estimator</h3>
+      <button class="btn-close-tray" id="closeTrayBtn" aria-label="Close tray">✕</button>
+    </div>
+
+    <div class="tray-items-container" id="trayItemsContainer">
+      <!-- Injected dynamically -->
+    </div>
+
+    <div class="tray-footer">
+      <div class="tray-total-row">
+        <span>Estimated Total:</span>
+        <strong id="trayTotalAmount">₹0</strong>
+      </div>
+      <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 12px; text-align: center;">
+        *Taxes & restaurant packaging applicable during in-store billing or delivery checkout.
+      </p>
+      <a href="#reservations" class="btn-primary" style="width: 100%; justify-content: center;" onclick="document.getElementById('trayOverlay').click()">
+        Reserve Table for this Meal
+      </a>
+    </div>
+  </aside>
+
+  <!-- Toast Notification Alert -->
+  <div class="toast-notice" id="toastNotice">
+    <span>✨</span>
+    <span id="toastMsg">Dish added to tray</span>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 14px;">
+            <img src="assets/logo.jpg" alt="Salt & Pepper Belghoria Logo" class="brand-logo-img">
+            <div class="brand-text">
+              <h1>Salt & Pepper</h1>
+              <span>Belghoria • Kolkata</span>
+            </div>
+          </div>
+          <p>
+            Belghoria's landmark bistro offering high-flavor Continental, Indo-Chinese, Tandoor Kebabs, Burgers, and Desserts. Registered as Salt & Pepper Restaurant Pvt. Ltd.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#menucard">Menu Card</a></li>
+            <li><a href="#signatures">Bestsellers</a></li>
+            <li><a href="#menu">Digital Menu</a></li>
+            <li><a href="#reviews">Customer Reviews</a></li>
+            <li><a href="#reservations">Table Booking</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore Menu</h4>
+          <ul>
+            <li><a href="#menu">Fish & Chips</a></li>
+            <li><a href="#menu">BBQ Burgers</a></li>
+            <li><a href="#menu">Thick Shakes</a></li>
+            <li><a href="#menu">Tandoori Kebabs</a></li>
+            <li><a href="#menu">Sizzling Brownie</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Visit & Order</h4>
+          <p style="margin-bottom: 8px;">24/1 Feeder Rd, Belghoria, Kolkata 700056</p>
+          <p style="margin-bottom: 14px; color: var(--primary);">Open Daily: 12:00 PM – 11:00 PM</p>
+          <div style="display:flex; gap: 10px;">
+            <a href="https://www.swiggy.com/restaurants/salt-and-pepper-belghoria-kolkata" target="_blank" rel="noopener noreferrer" style="color:#fc8019; font-weight:700;">Swiggy ↗</a>
+            <span style="color:var(--text-muted)">|</span>
+            <a href="https://www.district.in/kolkata/salt-pepper-belghoria/" target="_blank" rel="noopener noreferrer" style="color:#cb202d; font-weight:700;">Zomato ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Salt & Pepper Restaurant Private Limited. All rights reserved. Designed for Belghoria Food Enthusiasts.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="menu-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
