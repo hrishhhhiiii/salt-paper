@@ -1,3 +1,7 @@
+// Restaurant contact - change here and it updates every link that uses it
+const RESTAURANT_PHONE = '+918961727684';
+const RESTAURANT_WHATSAPP = '918961727684';
+
 // Salt & Pepper - Belghoria Application Logic
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -58,10 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="review-stars">${'★'.repeat(rev.rating)}</div>
         <p class="review-quote">"${rev.text}"</p>
         <div class="review-author">
-          <div class="author-avatar">${rev.name.charAt(0)}</div>
+          <div class="author-avatar">&#9733;</div>
           <div class="author-details">
             <h6>${rev.name}</h6>
-            <p>${rev.role} • <span style="color:var(--primary);">${rev.dish}</span></p>
+            <p>${rev.role}${rev.dish ? ` • <span style="color:var(--primary);">${rev.dish}</span>` : ''}</p>
           </div>
         </div>
       </div>
@@ -95,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuContainer.innerHTML = filtered.map(item => `
       <div class="menu-item-row" data-id="${item.id}">
         <div class="menu-item-thumb">
-          <img src="${item.image}" alt="${item.name}" loading="lazy">
+          <img src="${item.image}" alt="${item.name}" width="800" height="597" loading="lazy" decoding="async">
         </div>
         <div class="menu-item-info">
           <div class="item-header">
@@ -245,12 +249,34 @@ document.addEventListener('DOMContentLoaded', () => {
       const time = document.getElementById('resTime').value;
       const guests = document.getElementById('resGuests').value;
 
+      const occasion = (document.getElementById('resOccasion') || {}).value || '';
+
       if (!name || !phone || !date || !time) {
         alert('Please fill out all required reservation fields.');
         return;
       }
 
-      showToast(`🎉 Reservation confirmed for ${name} (${guests} Guests) on ${date} at ${time}! We look forward to hosting you.`);
+      // The form previously showed "Reservation confirmed" and sent the booking
+      // NOWHERE - no email, no API, no message. Guests believed they had a table.
+      // It now hands the request to WhatsApp so it actually reaches the restaurant,
+      // and the wording makes clear it is a REQUEST awaiting confirmation.
+      const lines = [
+        'New table request from the website',
+        '',
+        'Name: ' + name,
+        'Phone: ' + phone,
+        'Date: ' + date,
+        'Time: ' + time,
+        'Guests: ' + guests
+      ];
+      if (occasion) lines.push('Request: ' + occasion);
+
+      // %0A is an encoded newline - built this way so the URL needs no escapes
+      var waUrl = 'https://wa.me/' + RESTAURANT_WHATSAPP + '?text=' +
+                  lines.map(encodeURIComponent).join('%0A');
+      window.open(waUrl, '_blank', 'noopener');
+
+      showToast('Opening WhatsApp so you can send your request. We will confirm by phone.');
       reservationForm.reset();
     });
   }

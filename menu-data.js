@@ -386,37 +386,30 @@ const MENU_DATA = [
 ];
 
 // Customer Reviews & Feedback
+// Verbatim quotes from the restaurant's public Google listing.
+// Reviewer names are NOT published here - we only have the quote text, and
+// inventing names to attach to real quotes would be fabricated attribution.
+// If you want named testimonials, collect written permission from the guest first.
 const REVIEWS_DATA = [
   {
-    name: "Anirban Bhattacharya",
-    role: "Local Food Explorer (Google Reviewer)",
+    name: "Google review",
+    role: "Verified on Google Maps",
     rating: 5,
-    date: "August 2026",
-    text: "Salt & Pepper is easily the best cafe-bistro in Belghoria. The Fish & Chips is top tier — crispy, non-greasy and that tartar dip is just perfection. Cozy seating and polite staff.",
-    dish: "Fish & Chips, Oreo Shake"
+    text: "Nice food, nice ambience, warm behavior from staffs in affordable price.",
+    dish: ""
   },
   {
-    name: "Poulomi Sen",
-    role: "Regular Patron (Justdial Reviewer)",
+    name: "Google review",
+    role: "Verified on Google Maps",
     rating: 5,
-    date: "July 2026",
-    text: "Celebrated my birthday here with college friends. The BBQ chicken burger, gravy noodles, and sizzling brownie blew us away. Budget friendly, warm lighting and great vibes!",
-    dish: "BBQ Burger, Sizzling Brownie"
+    text: "Menu prices is also budget friendly with great service.",
+    dish: ""
   },
   {
-    name: "Soumya Mukherjee",
-    role: "Belghoria Resident (District Reviewer)",
+    name: "Google review",
+    role: "Verified on Google Maps",
     rating: 5,
-    date: "June 2026",
-    text: "Finally an aesthetic, multi-cuisine place on Feeder Road! The Mushroom Salt & Pepper and Tandoori platters are super flavorful. Recommend booking in advance on weekends.",
-    dish: "Mushroom Salt & Pepper, Tandoori Chicken"
-  },
-  {
-    name: "Debolina Das",
-    role: "Food Blogger (Kolkata Bites)",
-    rating: 5,
-    date: "May 2026",
-    text: "Their thick Oreo Shake and Kacha Aam Ice Tea are absolute crowd pullers. Very welcoming management, fast service, and pocket-friendly pricing for families and students alike.",
-    dish: "Oreo Shake, Kacha Aam Iced Tea"
+    text: "Now people of north Kolkata has a good place to hangout and eat.",
+    dish: ""
   }
 ];

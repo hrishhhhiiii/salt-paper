@@ -3,19 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salt & Pepper | Premier Bistro & Café in Belghoria, Kolkata</title>
-  <meta name="description" content="Experience the finest Indo-Chinese, Continental, Tandoori Kebabs, Burgers and rich Thick Shakes at Salt & Pepper Belghoria, Kolkata. Rated 4.6★ on Google.">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
-  
+  <title>Salt &amp; Pepper Belghoria | Multi-Cuisine Restaurant &amp; Cafe, Feeder Road Kolkata</title>
+  <meta name="description" content="Salt &amp; Pepper, 24/1 Feeder Road, Belghoria, Kolkata. Indo-Chinese, Continental, burgers, kebabs, shakes and coffee. Dine-in, takeaway and delivery with live music. Around Rs 200-400 per person. Call 089617 27684.">
+  <link rel="canonical" href="https://www.saltpepper.co.in/">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#16110F">
+
+  <!-- Open Graph / social sharing -->
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:site_name" content="Salt &amp; Pepper Belghoria">
+  <meta property="og:title" content="Salt &amp; Pepper | Multi-Cuisine Restaurant &amp; Cafe in Belghoria, Kolkata">
+  <meta property="og:description" content="Indo-Chinese, Continental, burgers, kebabs and thick shakes on Feeder Road, Belghoria. Dine-in, takeaway and delivery with live music.">
+  <meta property="og:url" content="https://www.saltpepper.co.in/">
+  <meta property="og:image" content="https://www.saltpepper.co.in/assets/hero-bg.jpg">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (660-byte SVG, replaces the 669KB JPEG) -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/logo.jpg">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-  
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <!--
+    TODO - CONFIRM OPENING TIME, then add this into the JSON-LD block below,
+    immediately after the "acceptsReservations" line, preceded by a comma:
+
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "HH:MM",
+        "closes": "22:45"
+      }]
+
+    Google's listing confirms only the CLOSING time (10:45 PM). Do not guess the opening
+    time - wrong hours in schema make Google show "Closed" while you are actually open.
+  -->
+
+  <!-- Local SEO: tells Google this is a restaurant, where it is, and how to reach it -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Salt & Pepper",
+    "url": "https://www.saltpepper.co.in/",
+    "image": "https://www.saltpepper.co.in/assets/hero-bg.jpg",
+    "telephone": "+91-89617-27684",
+    "priceRange": "Rs 200-400 per person",
+    "servesCuisine": ["Indo-Chinese", "Continental", "North Indian", "Cafe"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "24/1, Feeder Road, Belghoria",
+      "addressLocality": "Kolkata",
+      "addressRegion": "West Bengal",
+      "postalCode": "700056",
+      "addressCountry": "IN"
+    },
+    "menu": "https://www.saltpepper.co.in/#menu",
+    "acceptsReservations": "True"
+  }
+  </script>
 </head>
 <body>
 
@@ -23,7 +76,7 @@
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <a href="#hero" class="brand-logo">
-        <img src="assets/logo.jpg" alt="Salt & Pepper Belghoria Official Logo" class="brand-logo-img">
+        <img src="assets/logo.jpg" alt="Salt & Pepper Belghoria Official Logo" class="brand-logo-img" width="512" height="512">
         <div class="brand-text">
           <h1>Salt & Pepper</h1>
           <span>Belghoria • Kolkata</span>
@@ -45,7 +98,7 @@
           <span>Tray</span>
           <span class="tray-badge" id="trayCountBadge">0</span>
         </button>
-        <a href="#reservations" class="btn-primary" style="display:none; @media(min-width:768px){display:inline-flex;}">Book Table</a>
+        <a href="#reservations" class="btn-primary btn-book-desktop">Request Table</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation">☰</button>
       </div>
     </div>
@@ -56,18 +109,21 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-pill">
-          <span>✨</span> Voted Belghoria's #1 Favorite Bistro Cafe
+          <span>♪</span> Live Music &bull; Dine-In &bull; Takeaway &bull; Delivery
         </div>
         <h2 class="hero-title">
           Where Savory Flavors Meet <span>Warm Vibes</span>.
         </h2>
         <p class="hero-subtitle">
-          Indulge in authentic Kolkata-style Fish & Chips, succulent Tandoori Kebabs, mouth-watering Burgers, and divine Thick Shakes in a cozy, ambient setting on Feeder Road.
+          Indo-Chinese chilli chicken, BBQ wings, loaded burgers, baked pasta and thick shakes &mdash; served in a warm, easy-going room on Feeder Road, Belghoria.
         </p>
 
         <div class="hero-buttons">
-          <a href="#menu" class="btn-primary">
-            <span>Explore Menu & Pricing</span> →
+          <a href="tel:+918961727684" class="btn-primary">
+            <span>Call to Order &bull; 089617 27684</span>
+          </a>
+          <a href="#menu" class="btn-secondary">
+            <span>Explore Menu &amp; Pricing</span> →
           </a>
           <a href="#menucard" class="btn-secondary">
             <span>View Menu Card</span>
@@ -79,16 +135,16 @@
 
         <div class="hero-quick-meta">
           <div class="meta-stat-item">
-            <h4>4.6 ★</h4>
-            <p>2,000+ Google Reviews</p>
+            <h4>₹200 &ndash; 400</h4>
+            <p>Per person, approx.</p>
           </div>
           <div class="meta-stat-item">
-            <h4>12 PM - 11 PM</h4>
-            <p>Open 7 Days a Week</p>
+            <h4>Till 10:45 PM</h4>
+            <p>Open every day</p>
           </div>
           <div class="meta-stat-item">
-            <h4>₹700 for 2</h4>
-            <p>Budget-Friendly Feasts</p>
+            <h4>Live Music</h4>
+            <p>Vegan options available</p>
           </div>
         </div>
       </div>
@@ -100,7 +156,7 @@
     <div class="container">
       <div class="menu-card-spotlight">
         <div class="menu-card-img-wrap">
-          <img src="assets/menu-card.jpg" alt="Official Salt & Pepper Belghoria Menu Card" loading="lazy">
+          <img src="assets/menu-card.jpg" alt="Official Salt & Pepper Belghoria Menu Card" loading="lazy" width="900" height="672">
         </div>
         <div class="menu-card-info">
           <span class="section-tag">Authentic Dining Card</span>
@@ -135,9 +191,8 @@
         <!-- Dish 1: Fish & Chips -->
         <div class="signature-card">
           <div class="signature-img-wrap">
-            <img src="assets/fish-and-chips.jpg" alt="Classic British Fish and Chips">
+            <img src="assets/fish-and-chips.jpg" alt="Classic British Fish and Chips" width="800" height="597" loading="lazy" decoding="async">
             <span class="badge-veg-type badge-nonveg">Non-Veg</span>
-            <span class="badge-rating">⭐ 4.9</span>
           </div>
           <div class="signature-body">
             <span class="signature-cat">Continental Special</span>
@@ -153,9 +208,8 @@
         <!-- Dish 2: BBQ Chicken Burger -->
         <div class="signature-card">
           <div class="signature-img-wrap">
-            <img src="assets/bbq-burger.jpg" alt="Smoky BBQ Chicken Burger">
+            <img src="assets/bbq-burger.jpg" alt="Smoky BBQ Chicken Burger" width="800" height="597" loading="lazy" decoding="async">
             <span class="badge-veg-type badge-nonveg">Non-Veg</span>
-            <span class="badge-rating">⭐ 4.8</span>
           </div>
           <div class="signature-body">
             <span class="signature-cat">Burgers</span>
@@ -171,9 +225,8 @@
         <!-- Dish 3: Oreo Thick Shake -->
         <div class="signature-card">
           <div class="signature-img-wrap">
-            <img src="assets/oreo-shake.jpg" alt="Signature Thick Oreo Shake">
+            <img src="assets/oreo-shake.jpg" alt="Signature Thick Oreo Shake" width="800" height="1071" loading="lazy" decoding="async">
             <span class="badge-veg-type badge-veg">Pure Veg</span>
-            <span class="badge-rating">⭐ 4.9</span>
           </div>
           <div class="signature-body">
             <span class="signature-cat">Beverage Bestseller</span>
@@ -189,9 +242,8 @@
         <!-- Dish 4: Sizzling Kebab Platter -->
         <div class="signature-card">
           <div class="signature-img-wrap">
-            <img src="assets/tandoori-kebab.jpg" alt="Sizzling Tandoori Kebab Platter">
+            <img src="assets/tandoori-kebab.jpg" alt="Sizzling Tandoori Kebab Platter" width="800" height="597" loading="lazy" decoding="async">
             <span class="badge-veg-type badge-nonveg">Non-Veg</span>
-            <span class="badge-rating">⭐ 4.8</span>
           </div>
           <div class="signature-body">
             <span class="signature-cat">Tandoor</span>
@@ -259,8 +311,8 @@
           <a href="https://www.swiggy.com/restaurants/salt-and-pepper-belghoria-kolkata" target="_blank" rel="noopener noreferrer" class="btn-delivery btn-swiggy">
             🛵 Order on Swiggy
           </a>
-          <a href="https://www.district.in/kolkata/salt-pepper-belghoria/" target="_blank" rel="noopener noreferrer" class="btn-delivery btn-zomato">
-            🍽️ Order on Zomato / District
+          <a href="tel:+918961727684" class="btn-delivery btn-zomato">
+            📞 Call us directly &bull; 089617 27684
           </a>
         </div>
       </div>
@@ -276,31 +328,15 @@
         <p class="section-desc">Real stories, authentic ratings, and culinary experiences shared by patrons across Kolkata.</p>
       </div>
 
-      <!-- Ratings Metric Badges -->
+      <!-- Ratings: link out to the real, verifiable reviews rather than printing numbers we cannot source -->
       <div class="ratings-header-badge-row">
-        <div class="rating-score-box">
-          <div class="score-num">4.6★</div>
+        <a class="rating-score-box" href="https://www.google.com/maps/search/salt+and+pepper+belghoria+kolkata/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+          <div class="score-num">★</div>
           <div class="score-info">
-            <h5>Google Maps</h5>
-            <p>Over 2,000+ authentic reviews</p>
+            <h5>Read our Google reviews</h5>
+            <p>Ratings and photos from real diners &nearr;</p>
           </div>
-        </div>
-
-        <div class="rating-score-box">
-          <div class="score-num">4.9★</div>
-          <div class="score-info">
-            <h5>Justdial Verified</h5>
-            <p>2,200+ local customer ratings</p>
-          </div>
-        </div>
-
-        <div class="rating-score-box">
-          <div class="score-num">4.5★</div>
-          <div class="score-info">
-            <h5>Swiggy Dineout</h5>
-            <p>Top trending cafe in Belghoria</p>
-          </div>
-        </div>
+        </a>
       </div>
 
       <!-- Reviews Carousel Grid -->
@@ -317,14 +353,14 @@
         <!-- Reservation Form Box -->
         <div class="reserve-card-box">
           <span class="section-tag">Skip The Wait</span>
-          <h3>Book Your Table</h3>
-          <p>Due to high weekend demand, we recommend reserving your table in advance.</p>
+          <h3>Request a Table</h3>
+          <p>Send us your details and we will confirm your table by phone. Weekends fill up, so please request early.</p>
 
           <form id="reservationForm" class="reservation-form">
             <div class="form-row">
               <div class="form-group">
                 <label for="resName">Full Name *</label>
-                <input type="text" id="resName" placeholder="e.g. Subhashish Roy" required>
+                <input type="text" id="resName" placeholder="Your full name" required>
               </div>
               <div class="form-group">
                 <label for="resPhone">Phone Number *</label>
@@ -369,7 +405,7 @@
             </div>
 
             <button type="submit" class="btn-primary" style="margin-top: 10px; width: 100%; justify-content: center;">
-              Confirm Reservation Request
+              Send Table Request via WhatsApp
             </button>
           </form>
         </div>
@@ -401,7 +437,7 @@
               <div class="loc-icon">⏰</div>
               <div class="loc-text">
                 <h5>Operating Hours</h5>
-                <p>Monday – Sunday: 12:00 PM – 11:00 PM</p>
+                <p>Open every day, until 10:45 PM<br><span style="opacity:.75;">Takeaway counter closes 10:30 PM</span></p>
               </div>
             </div>
 
@@ -415,7 +451,7 @@
           </div>
 
           <div class="map-embed-placeholder">
-            <img src="assets/hero-bg.jpg" alt="Map Location preview" style="width:100%; height:100%; object-fit:cover; filter: brightness(0.4);">
+            <img src="assets/hero-bg.jpg" alt="Map Location preview" style="width:100%; height:100%; object-fit:cover; filter: brightness(0.4);" width="1600" height="893" loading="lazy" decoding="async">
             <a href="https://www.google.com/maps/search/salt+and+pepper+belghoria+kolkata/" target="_blank" rel="noopener noreferrer" class="btn-primary map-overlay-btn">
               🗺️ Open in Google Maps
             </a>
@@ -446,7 +482,7 @@
         *Taxes & restaurant packaging applicable during in-store billing or delivery checkout.
       </p>
       <a href="#reservations" class="btn-primary" style="width: 100%; justify-content: center;" onclick="document.getElementById('trayOverlay').click()">
-        Reserve Table for this Meal
+        Request Table for this Meal
       </a>
     </div>
   </aside>
@@ -463,7 +499,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <div class="brand-logo" style="margin-bottom: 14px;">
-            <img src="assets/logo.jpg" alt="Salt & Pepper Belghoria Logo" class="brand-logo-img">
+            <img src="assets/logo.jpg" alt="Salt & Pepper Belghoria Logo" class="brand-logo-img" width="512" height="512">
             <div class="brand-text">
               <h1>Salt & Pepper</h1>
               <span>Belghoria • Kolkata</span>
@@ -482,7 +518,7 @@
             <li><a href="#signatures">Bestsellers</a></li>
             <li><a href="#menu">Digital Menu</a></li>
             <li><a href="#reviews">Customer Reviews</a></li>
-            <li><a href="#reservations">Table Booking</a></li>
+            <li><a href="#reservations">Table Request</a></li>
           </ul>
         </div>
 
@@ -500,11 +536,12 @@
         <div class="footer-col">
           <h4>Visit & Order</h4>
           <p style="margin-bottom: 8px;">24/1 Feeder Rd, Belghoria, Kolkata 700056</p>
-          <p style="margin-bottom: 14px; color: var(--primary);">Open Daily: 12:00 PM – 11:00 PM</p>
+          <p style="margin-bottom: 8px;"><a href="tel:+918961727684" style="color:var(--primary); font-weight:700;">089617 27684</a></p>
+          <p style="margin-bottom: 14px; color: var(--primary);">Open daily until 10:45 PM</p>
           <div style="display:flex; gap: 10px;">
             <a href="https://www.swiggy.com/restaurants/salt-and-pepper-belghoria-kolkata" target="_blank" rel="noopener noreferrer" style="color:#fc8019; font-weight:700;">Swiggy ↗</a>
             <span style="color:var(--text-muted)">|</span>
-            <a href="https://www.district.in/kolkata/salt-pepper-belghoria/" target="_blank" rel="noopener noreferrer" style="color:#cb202d; font-weight:700;">Zomato ↗</a>
+            <a href="tel:+918961727684" style="color:var(--primary); font-weight:700;">Call ↗</a>
           </div>
         </div>
       </div>
@@ -518,5 +555,15 @@
   <!-- Scripts -->
   <script src="menu-data.js"></script>
   <script src="app.js"></script>
+  <!-- Sticky mobile action bar - the two things a hungry phone visitor actually wants -->
+  <div class="mobile-action-bar">
+    <a href="tel:+918961727684" class="mab-btn mab-call">
+      <span aria-hidden="true">&#9742;</span> Call to Order
+    </a>
+    <a href="https://www.google.com/maps/search/salt+and+pepper+belghoria+kolkata/" target="_blank" rel="noopener noreferrer" class="mab-btn mab-dir">
+      <span aria-hidden="true">&#9906;</span> Directions
+    </a>
+  </div>
+
 </body>
 </html>

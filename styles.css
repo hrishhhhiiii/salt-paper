@@ -1,4 +1,17 @@
 :root {
+  /* Design Tokens from IMPLEMENTATION_PLAN.md §3 */
+  --sp-app:        #16110F;  /* page background */
+  --sp-surface:    #1E1917;  /* cards, bars */
+  --sp-raised:     #2A2320;  /* inputs, tiles on surface */
+  --sp-border:     #3A322D;
+  --sp-text:       #F5EFE6;
+  --sp-muted:      #9E9187;  /* passes 4.5:1 on --sp-surface */
+  --sp-chilli:     #C8452F;  /* primary action, late, modifiers */
+  --sp-chilli-lt:  #E0715C;  /* chilli text on dark */
+  --sp-brass:      #C79A55;  /* accent, firing */
+  --sp-blue:       #5B8CA8;  /* new */
+  --sp-veg:        #4B8F5E;
+
   /* Brand Identity: Warm Antique Gold, Crimson Red, and Charcoal Black */
   --primary: #c99846;               /* Warm Antique Gold */
   --primary-hover: #b38235;
@@ -1378,4 +1391,90 @@ img {
   .delivery-partners-btns {
     justify-content: center;
   }
+}
+
+/* ============================================================
+   MARKET-READY ADDITIONS
+   ============================================================ */
+
+/* "Book Table" in the navbar previously used an inline @media inside a
+   style attribute, which is invalid CSS - the button never appeared at all. */
+.btn-book-desktop { display: none; }
+@media (min-width: 768px) {
+  .btn-book-desktop { display: inline-flex; }
+}
+
+/* ---- Sticky mobile action bar ---------------------------------- */
+.mobile-action-bar {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 950;
+  display: none;
+  gap: 10px;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(16, 17, 21, 0.94);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.mobile-action-bar .mab-btn {
+  flex: 1 1 0;
+  min-height: 48px;             /* >=44px touch target */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+.mobile-action-bar .mab-call { background: var(--primary, #c99846); color: #16110f; }
+.mobile-action-bar .mab-dir  { background: transparent; color: #f5efe6; border: 1px solid rgba(255,255,255,0.28); }
+.mobile-action-bar .mab-btn:focus-visible { outline: 3px solid #f5efe6; outline-offset: 2px; }
+
+@media (max-width: 767px) {
+  .mobile-action-bar { display: flex; }
+  /* keep the bar from covering the end of the page or the tray drawer */
+  body { padding-bottom: 76px; }
+  .tray-drawer { padding-bottom: 76px; }
+}
+
+/* ---- Visible keyboard focus (was missing site-wide) ------------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--primary, #c99846);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---- Respect reduced-motion preferences ------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Mobile header fix ------------------------------------------
+   The brand name was wrapping onto 3 lines, which pushed the fixed
+   navbar to ~131px tall while .hero-section only reserved 100px of
+   top padding - so the hero pill was clipped behind the header.     */
+@media (max-width: 767px) {
+  .brand-text h1 {
+    white-space: nowrap;
+    font-size: 1.05rem;
+    line-height: 1.15;
+  }
+  .brand-text span {
+    white-space: nowrap;
+    font-size: 0.62rem;
+  }
+  .brand-logo-img { width: 38px; height: 38px; }
+  .hero-section { padding-top: 116px; }
 }
